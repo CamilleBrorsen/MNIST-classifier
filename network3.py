@@ -8,9 +8,7 @@ Supports several layer types (fully connected, convolutional, max
 pooling, softmax), and activation functions (sigmoid, tanh, and
 rectified linear units, with more easily added).
 
-When run on a CPU, this program is much faster than network.py and
-network2.py.  However, unlike network.py and network2.py it can also
-be run on a GPU, which makes it faster still.
+This can also be run on a GPU, which makes it faster still.
 
 Because the code is based on Theano, the code is different in many
 ways from network.py and network2.py.  However, where possible I have
@@ -60,7 +58,7 @@ else:
         "network3.py to set\nthe GPU flag to True.")
 '''
 #### Load the MNIST data
-def load_data_shared(filename="mnist_expanded1.pkl.gz"):
+def load_data_shared(filename="mnist.pkl.gz"):
     f = gzip.open(filename, 'rb')
     training_data, validation_data, test_data = pickle.load(f, encoding="latin1")
     f.close()
